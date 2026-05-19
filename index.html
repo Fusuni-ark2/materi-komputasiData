@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Komunikasi Data, Jaringan, dan Internet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">📚 Modul Jaringan</h1>
+            <ul class="nav-links">
+                <li><a href="#bab1">Pendahuluan</a></li>
+                <li><a href="#bab2">Materi</a></li>
+                <li><a href="#bab3">Implementasi</a></li>
+                <li><a href="#praktikum">Praktikum</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1>Komunikasi Data, Jaringan Data, dan Internet</h1>
+            <p class="subtitle">Dalam Dunia Pendidikan</p>
+            <div class="meta">
+                <span>👨‍🏫 Dosen: Nina Dwi Putri, M.Kom</span>
+                <span>👥 Kelompok 1 - S1 Informatika</span>
+                <span>📅 TA 2023/2027</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- BAB 1 -->
+        <section id="bab1" class="bab-section">
+            <h2>BAB 1: PENDAHULUAN</h2>
+            
+            <div class="card">
+                <h3>A. Latar Belakang</h3>
+                <p>Perkembangan ilmu pengetahuan dan teknologi informasi telah secara signifikan mengubah cara berfikir serta gaya hidup masyarakat Indonesia...</p>
+            </div>
+
+            <div class="card">
+                <h3>B. Permasalahan</h3>
+                <ul class="problem-list">
+                    <li>❌ Minimnya infrastruktur jaringan yang belum tersebar merata</li>
+                    <li>❌ Ketidakstabilan kualitas jaringan</li>
+                    <li>❌ Risiko keamanan siber</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>C. Tujuan</h3>
+                <div class="tujuan-grid">
+                    <div class="tujuan-item">
+                        <span class="icon">📖</span>
+                        <p>Memahami konsep dasar komunikasi data</p>
+                    </div>
+                    <div class="tujuan-item">
+                        <span class="icon">🌐</span>
+                        <p>Mengenal arsitektur jaringan</p>
+                    </div>
+                    <div class="tujuan-item">
+                        <span class="icon">🔧</span>
+                        <p>Menerapkan dalam pendidikan digital</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAB 2: Materi Pembelajaran -->
+        <section id="bab2" class="bab-section">
+            <h2>BAB 2: MATERI PEMBELAJARAN</h2>
+
+            <!-- Materi 2.1 -->
+            <div class="materi-container">
+                <h3>2.1 Komunikasi Data, Jaringan Data, dan Internet</h3>
+                
+                <div class="interactive-diagram">
+                    <h4>Hierarki Komunikasi Data</h4>
+                    <div class="diagram-box" id="hierarkiDiagram">
+                        <div class="layer" data-layer="internet">
+                            <h5>🌍 INTERNET (Global)</h5>
+                            <p>Jaringan worldwide dengan TCP/IP</p>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="layer" data-layer="jaringan">
+                            <h5>🔗 JARINGAN DATA</h5>
+                            <p>Interkoneksi perangkat</p>
+                        </div>
+                        <div class="arrow">↓</div>
+                        <div class="layer" data-layer="komunikasi">
+                            <h5>💬 KOMUNIKASI DATA</h5>
+                            <p>Pertukaran informasi</p>
+                        </div>
+                    </div>
+                    <button class="btn-explore" onclick="exploreHierarki()">Jelajahi Interaktif</button>
+                </div>
+
+                <div class="comparison-table">
+                    <h4>Perbandingan Konsep</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Konsep</th>
+                                <th>Definisi</th>
+                                <th>Contoh</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Komunikasi Data</strong></td>
+                                <td>Proses pertukaran informasi</td>
+                                <td>Upload tugas ke LMS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Jaringan Data</strong></td>
+                                <td>Penghubung antar perangkat</td>
+                                <td>LAN lab komputer</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Internet</strong></td>
+                                <td>Jaringan global</td>
+                                <td>Akses Google Classroom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Materi 2.2 -->
+            <div class="materi-container">
+                <h3>2.2 Dasar Jaringan Komputer dan Internet</h3>
+
+                <div class="topology-simulator">
+                    <h4>Simulator Topologi Jaringan</h4>
+                    <div class="topology-controls">
+                        <button onclick="showTopology('star')">⭐ Star</button>
+                        <button onclick="showTopology('bus')">🔗 Bus</button>
+                        <button onclick="showTopology('ring')">🔄 Ring</button>
+                        <button onclick="showTopology('mesh')">🕸️ Mesh</button>
+                    </div>
+                    <div id="topologyDisplay" class="topology-display">
+                        <!-- Dynamic content -->
+                    </div>
+                </div>
+
+                <div class="component-cards">
+                    <div class="component-card">
+                        <div class="icon">🎯</div>
+                        <h4>Router</h4>
+                        <p>Mengarahkan paket antar jaringan</p>
+                    </div>
+                    <div class="component-card">
+                        <div class="icon">🔀</div>
+                        <h4>Switch</h4>
+                        <p>Menghubungkan perangkat dalam LAN</p>
+                    </div>
+                    <div class="component-card">
+                        <div class="icon">📡</div>
+                        <h4>Access Point</h4>
+                        <p>Memancarkan sinyal Wi-Fi</p>
+                    </div>
+                    <div class="component-card">
+                        <div class="icon">💾</div>
+                        <h4>Server</h4>
+                        <p>Menyimpan data dan aplikasi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materi 2.3 -->
+            <div class="materi-container">
+                <h3>2.3 Arsitektur Protokol</h3>
+
+                <div class="osi-model-interactive">
+                    <h4>Model OSI 7 Layer - Interaktif</h4>
+                    <div class="osi-layers">
+                        <div class="osi-layer" data-layer="7" onclick="showLayerDetail(7)">
+                            <span class="layer-number">7</span>
+                            <span class="layer-name">Application</span>
+                            <span class="layer-desc">HTTP, FTP, DNS</span>
+                        </div>
+                        <div class="osi-layer" data-layer="6" onclick="showLayerDetail(6)">
+                            <span class="layer-number">6</span>
+                            <span class="layer-name">Presentation</span>
+                            <span class="layer-desc">Enkripsi, Kompresi</span>
+                        </div>
+                        <div class="osi-layer" data-layer="5" onclick="showLayerDetail(5)">
+                            <span class="layer-number">5</span>
+                            <span class="layer-name">Session</span>
+                            <span class="layer-desc">Manajemen sesi</span>
+                        </div>
+                        <div class="osi-layer" data-layer="4" onclick="showLayerDetail(4)">
+                            <span class="layer-number">4</span>
+                            <span class="layer-name">Transport</span>
+                            <span class="layer-desc">TCP, UDP</span>
+                        </div>
+                        <div class="osi-layer" data-layer="3" onclick="showLayerDetail(3)">
+                            <span class="layer-number">3</span>
+                            <span class="layer-name">Network</span>
+                            <span class="layer-desc">IP, Routing</span>
+                        </div>
+                        <div class="osi-layer" data-layer="2" onclick="showLayerDetail(2)">
+                            <span class="layer-number">2</span>
+                            <span class="layer-name">Data Link</span>
+                            <span class="layer-desc">MAC, Switch</span>
+                        </div>
+                        <div class="osi-layer" data-layer="1" onclick="showLayerDetail(1)">
+                            <span class="layer-number">1</span>
+                            <span class="layer-name">Physical</span>
+                            <span class="layer-desc">Kabel, Sinyal</span>
+                        </div>
+                    </div>
+                    <div id="layerDetail" class="layer-detail">
+                        <p>Klik layer untuk melihat detail</p>
+                    </div>
+                </div>
+
+                <div class="encapsulation-animation">
+                    <h4>Animasi Enkapsulasi Data</h4>
+                    <div class="animation-container">
+                        <button onclick="startEncapsulation()">▶️ Mulai Animasi</button>
+                        <div id="encapsulationSteps" class="encapsulation-steps">
+                            <!-- Steps will be shown here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materi 2.4 -->
+            <div class="materi-container">
+                <h3>2.4 Protokol Transfer: UDP dan TCP</h3>
+
+                <div class="protocol-comparison">
+                    <h4>Perbandingan UDP vs TCP</h4>
+                    <div class="comparison-grid">
+                        <div class="protocol-box udp">
+                            <h5>🚀 UDP</h5>
+                            <ul>
+                                <li>Connectionless</li>
+                                <li>Tidak andal</li>
+                                <li>Cepat & ringan</li>
+                                <li>Header 8 byte</li>
+                            </ul>
+                            <div class="use-case">
+                                <strong>Cocok untuk:</strong>
+                                <p>Video call, Streaming, DNS</p>
+                            </div>
+                        </div>
+                        <div class="protocol-box tcp">
+                            <h5>🛡️ TCP</h5>
+                            <ul>
+                                <li>Connection-oriented</li>
+                                <li>Reliable (ada ACK)</li>
+                                <li>Flow control</li>
+                                <li>Header 20+ byte</li>
+                            </ul>
+                            <div class="use-case">
+                                <strong>Cocok untuk:</strong>
+                                <p>Download, Email, Web</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="handshake-simulator">
+                    <h4>TCP 3-Way Handshake Simulator</h4>
+                    <button onclick="simulateHandshake()">🔄 Jalankan Simulasi</button>
+                    <div id="handshakeAnimation" class="handshake-animation">
+                        <!-- Animation will be here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materi 2.5 -->
+            <div class="materi-container">
+                <h3>2.5 Pengkodean Sinyal</h3>
+
+                <div class="signal-visualization">
+                    <h4>Visualisasi Encoding</h4>
+                    <canvas id="encodingCanvas" width="800" height="400"></canvas>
+                    <div class="controls">
+                        <label>Input Bits: </label>
+                        <input type="text" id="bitInput" value="10110010" maxlength="8" pattern="[01]+">
+                        <button onclick="drawEncoding()">Visualisasi</button>
+                    </div>
+                    <div class="encoding-types">
+                        <label><input type="radio" name="encoding" value="nrz" checked> NRZ</label>
+                        <label><input type="radio" name="encoding" value="manchester"> Manchester</label>
+                        <label><input type="radio" name="encoding" value="4b5b"> 4B/5B</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAB 3: Implementasi -->
+        <section id="bab3" class="bab-section">
+            <h2>BAB 3: IMPLEMENTASI DALAM PENDIDIKAN</h2>
+            
+            <div class="case-study">
+                <h3>Studi Kasus: Jaringan Kampus Ideal</h3>
+                <div class="network-diagram">
+                    <svg viewBox="0 0 800 600" class="campus-network">
+                        <!-- Internet -->
+                        <rect x="300" y="20" width="200" height="60" fill="#3498db" rx="10"/>
+                        <text x="400" y="55" text-anchor="middle" fill="white">INTERNET</text>
+                        
+                        <!-- Firewall -->
+                        <line x1="400" y1="80" x2="400" y2="120" stroke="#2c3e50" stroke-width="3"/>
+                        <rect x="300" y="120" width="200" height="50" fill="#e74c3c" rx="5"/>
+                        <text x="400" y="150" text-anchor="middle" fill="white">FIREWALL</text>
+                        
+                        <!-- Core Router -->
+                        <line x1="400" y1="170" x2="400" y2="210" stroke="#2c3e50" stroke-width="3"/>
+                        <circle cx="400" cy="240" r="40" fill="#9b59b6"/>
+                        <text x="400" y="245" text-anchor="middle" fill="white">ROUTER</text>
+                        
+                        <!-- Buildings -->
+                        <line x1="250" y1="280" x2="150" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                        <line x1="400" y1="280" x2="400" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                        <line x1="550" y1="280" x2="650" y2="350" stroke="#2c3e50" stroke-width="2"/>
+                        
+                        <rect x="100" y="350" width="100" height="80" fill="#27ae60" rx="5"/>
+                        <text x="150" y="395" text-anchor="middle" fill="white">Gedung A</text>
+                        
+                        <rect x="350" y="350" width="100" height="80" fill="#27ae60" rx="5"/>
+                        <text x="400" y="395" text-anchor="middle" fill="white">Server</text>
+                        
+                        <rect x="600" y="350" width="100" height="80" fill="#27ae60" rx="5"/>
+                        <text x="650" y="395" text-anchor="middle" fill="white">Lab</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Praktikum Section -->
+        <section id="praktikum" class="bab-section">
+            <h2>PANDUAN PRAKTIKUM</h2>
+            
+            <div class="praktikum-tabs">
+                <button class="tab-btn active" onclick="showPraktikum(1)">Praktikum 1</button>
+                <button class="tab-btn" onclick="showPraktikum(2)">Praktikum 2</button>
+                <button class="tab-btn" onclick="showPraktikum(3)">Praktikum 3</button>
+                <button class="tab-btn" onclick="showPraktikum(4)">Praktikum 4</button>
+                <button class="tab-btn" onclick="showPraktikum(5)">Praktikum 5</button>
+            </div>
+
+            <div id="praktikumContent" class="praktikum-content">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Kelompok 1 - S1 Informatika</p>
+            <p>Dosen: Nina Dwi Putri, M.Kom</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
